@@ -8,7 +8,7 @@ Focused on Immutable.js
 
 
 
-1. Components
+> 1. Components
 
 App
 
@@ -17,7 +17,7 @@ Todos
 Container/TodosContainer
 
 
-2. Actions for todos store
+> 2. Actions for todos store
 
 CHANGE_INPUT
 
@@ -28,7 +28,7 @@ TOGGLE
 REMOVE
 
 
-3. Used immutable
+> 3. Used immutable
 
          // Todos.js
          
