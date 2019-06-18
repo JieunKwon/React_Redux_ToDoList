@@ -30,25 +30,59 @@ REMOVE
 
 > 3. Used immutable
 
-         // Components/Todos.js
+  src/store/modules/todo.js
          
         import { List, Map } from 'immutable';
         
         ...
         
-        // Map for the default todos 
-        Todos.defaultProps = {
-        todos: List([
-          Map({
-            id: 0,
-            text: 'Go to TD',
-            checked: false
-          }),
-          Map({
-            id: 1,
-            text: 'Study Redux',
-            checked: true
-          })
-        ]),
-        input: ''
-       };
+         const initialState = Map({
+           input: '',
+           todos: List()
+         });
+
+         export default handleActions({
+           
+           ...
+           [CHANGE_INPUT]: (state, action) => state.set('input', action.payload),
+           [INSERT]: (state, { payload: text }) => {
+             
+             const item = Map({ id: id++, checked: false, text });  
+             return state.update('todos', todos => todos.push(item));
+           },
+           [TOGGLE]: (state, { payload: id }) => { 
+             const index = state.get('todos').findIndex(item => item.get('id') === id);
+             return state.updateIn(['todos', index, 'checked'], checked => !checked);
+           },
+           [REMOVE]: (state, { payload: id }) => {
+              
+             const index = state.get('todos').findIndex(item => item.get('id') === id);
+             return state.deleteIn(['todos', index]);
+           }
+         }, initialState);
+
+
+
+  Components/Todos.js
+  
+  see the default todos 
+         
+         import { List, Map } from 'immutable';
+         
+         ...
+         
+         Todos.defaultProps = {
+           todos: List([
+             Map({
+               id: 0,
+               text: 'Go to TD',
+               checked: false
+             }),
+             Map({
+               id: 1,
+               text: 'Study Redux',
+               checked: true
+             })
+           ]),
+           input: ''
+         };
