@@ -17,7 +17,7 @@ Todos
 Container/TodosContainer
 
 
-> 2. Actions for todos store
+> 2.  Actions for todos store : store/todo.js
 
 CHANGE_INPUT
 
@@ -30,7 +30,7 @@ REMOVE
 
 > 3. Used immutable
 
-         // Todos.js
+         // Components/Todos.js
          
         import { List, Map } from 'immutable';
         
