@@ -28,7 +28,7 @@ TOGGLE
 REMOVE
 
 
-> 3. Used immutable
+> 3. Used immutable List 
 
   src/store/modules/todo.js
          
@@ -40,22 +40,23 @@ REMOVE
            input: '',
            todos: List()
          });
-
-         export default handleActions({
-           
-           ...
+        
+        ...
+        
+         export default handleActions({ 
            [CHANGE_INPUT]: (state, action) => state.set('input', action.payload),
-           [INSERT]: (state, { payload: text }) => {
-             
+           
+           [INSERT]: (state, { payload: text }) => {             
              const item = Map({ id: id++, checked: false, text });  
              return state.update('todos', todos => todos.push(item));
            },
+           
            [TOGGLE]: (state, { payload: id }) => { 
              const index = state.get('todos').findIndex(item => item.get('id') === id);
              return state.updateIn(['todos', index, 'checked'], checked => !checked);
            },
-           [REMOVE]: (state, { payload: id }) => {
-              
+           
+           [REMOVE]: (state, { payload: id }) => {              
              const index = state.get('todos').findIndex(item => item.get('id') === id);
              return state.deleteIn(['todos', index]);
            }
@@ -65,7 +66,7 @@ REMOVE
 
   Components/Todos.js
   
-  see the default todos 
+  see the default todos
          
          import { List, Map } from 'immutable';
          
