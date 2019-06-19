@@ -87,3 +87,14 @@ REMOVE
            ]),
            input: ''
          };
+
+> 4. View this app
+
+To add new todo, input text into text-box.
+
+To remove, double-click an item.
+
+To make todo be done, click an item.
+
+
+<img src='bagic_todo.JPG' width='500px'>
