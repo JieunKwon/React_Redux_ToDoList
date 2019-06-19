@@ -66,7 +66,7 @@ REMOVE
 
   Components/Todos.js
   
-  see the default todos
+  can set todos using List and Map if need the default todos
          
          import { List, Map } from 'immutable';
          
