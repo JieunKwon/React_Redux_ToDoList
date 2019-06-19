@@ -30,6 +30,8 @@ REMOVE
 
 > 3. Used immutable List 
 
+Using immutable js, can call update, updateIn, or get.
+
   src/store/modules/todo.js
          
         import { List, Map } from 'immutable';
