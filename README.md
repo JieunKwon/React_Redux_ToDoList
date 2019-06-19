@@ -90,7 +90,7 @@ Using immutable js, can call update, updateIn, or get.
            input: ''
          };
 
-> 4. View this app
+> 4. View this app @ version 1
 
 To add new todo, input text into text-box.
 
@@ -99,4 +99,12 @@ To remove, double-click an item.
 To make todo be done, click an item.
 
 
-<img src='img/basic_todos.JPG' width='500px'>
+<img src='img/basic_todos.JPG' width='400px'>
+
+> 5. Feature Upgrades 
+
+Can make 'Undo' after making 'Done'
+
+Show the different background according to item's state, done or not 
+
+<img src='img/color_todos.JPG' width='400px'>
