@@ -97,4 +97,4 @@ To remove, double-click an item.
 To make todo be done, click an item.
 
 
-<img src='basic_todos.JPG' width='500px'>
+<img src='img/basic_todos.JPG' width='500px'>
