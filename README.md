@@ -108,3 +108,38 @@ Can make 'Undo' after making 'Done'
 Show the different background according to item's state, done or not 
 
 <img src='img/color_todos.JPG' width='400px'>
+
+
+> 6. Why Why Immutability Is Important 
+
+Original Tutorial is from https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important
+
+1) Example
+
+       ** Data Change directly
+
+       var player = {score: 1, name: 'Jeff'};
+       player.score = 2;
+
+
+       ** Data Change by other copied data  
+
+       var player = {score: 1, name: 'Jeff'};
+
+       var newPlayer = Object.assign({}, player, {score: 2}); 
+       // or 
+       // var newPlayer = {...player, score: 2};
+
+
+2) Benefits
+
+It helps you build pure components in React. 
+
+Immutable data can easily determine if changes have been made which helps to determine when a component requires re-rendering.
+
+Immutability makes complex features much easier to implement. 
+
+If a state is immutable, we can make an app move or keep previous versions. It is easier to implement redo or undo.
+
+Detecting changes in immutable objects is considerably easier. 
+
