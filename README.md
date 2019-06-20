@@ -4,7 +4,7 @@
 
 ToDoList App with React Redux
 
-Focused on Immutable.js
+Focused on using Immutable.js
 
 
 
@@ -19,11 +19,11 @@ Container/TodosContainer
 
 > 2.  Actions for todos store : store/todo.js
  
-INSERT
+INSERT : to add new todo-items
 
-TOGGLE
+TOGGLE : to mark an item by done
 
-REMOVE
+REMOVE : to delete an item
 
 
 > 3. Used immutable List 
