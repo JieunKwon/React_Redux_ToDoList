@@ -18,9 +18,7 @@ Container/TodosContainer
 
 
 > 2.  Actions for todos store : store/todo.js
-
-CHANGE_INPUT
-
+ 
 INSERT
 
 TOGGLE
@@ -30,7 +28,44 @@ REMOVE
 
 > 3. Used immutable List 
 
-Using immutable js, can call update, updateIn, or get.
+  Components/Todos.js
+  
+  can set todos using List and Map for data and array
+         
+         import { List, Map } from 'immutable';
+         
+         ...
+         
+         Todos.defaultProps = {
+           todos: List([
+             Map({
+               id: 0,
+               text: 'Go to TD',
+               checked: false
+             }),
+             Map({
+               id: 1,
+               text: 'Study Redux',
+               checked: true
+             })
+           ]),
+           input: ''
+         };
+
+> 4. View feature of the first version 
+
+To add new todo, input text into text-box.
+
+To remove, double-click an item.
+
+To make todo be done, click an item.
+
+
+<img src='img/basic_todos.JPG' width='400px'>
+
+> 
+
+Using immutable js, can call 'update', 'updateIn', or 'deleteIn' to change state and call 'get' to get state.
 
   src/store/modules/todo.js
          
@@ -65,41 +100,6 @@ Using immutable js, can call update, updateIn, or get.
          }, initialState);
 
 
-
-  Components/Todos.js
-  
-  can set todos using List and Map if need the default todos
-         
-         import { List, Map } from 'immutable';
-         
-         ...
-         
-         Todos.defaultProps = {
-           todos: List([
-             Map({
-               id: 0,
-               text: 'Go to TD',
-               checked: false
-             }),
-             Map({
-               id: 1,
-               text: 'Study Redux',
-               checked: true
-             })
-           ]),
-           input: ''
-         };
-
-> 4. View this app @ version 1
-
-To add new todo, input text into text-box.
-
-To remove, double-click an item.
-
-To make todo be done, click an item.
-
-
-<img src='img/basic_todos.JPG' width='400px'>
 
 > 5. Feature Upgrades 
 
