@@ -110,7 +110,7 @@ Show the different background according to item's state, done or not
 <img src='img/color_todos.JPG' width='400px'>
 
 
-> 6. Why Why Immutability Is Important 
+> 6. Why Immutability Is Important 
 
 Original Tutorial is from https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important
 
